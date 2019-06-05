@@ -2,8 +2,8 @@
   "name": "@open-tech-world/parse-env-file",
   "version": "0.0.0",
   "description": "Node.js utility to parse .env files.",
-  "main": "@open-tech-world/parse-env-file.cjs.js",
-  "module": "@open-tech-world/parse-env-file.esm.js",
+  "main": "parse-env-file.cjs.js",
+  "module": "parse-env-file.esm.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rollup -c",
@@ -30,5 +30,6 @@
     "prettier": "^1.17.1",
     "rollup": "^1.14.0",
     "rollup-plugin-filesize": "^6.1.0"
-  }
+  },
+  "files": ["dist"]
 }
