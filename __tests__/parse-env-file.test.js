@@ -16,6 +16,7 @@ describe('When valid env file passed', () => {
   const invalidFile = './__tests__/.env.vars.invalid';
   const varsOneFile = './__tests__/.env.vars.one';
   const varsMultiFile = './__tests__/.env.vars.multi';
+  const varsCommentFile = './__tests__/.env.vars.comment';
 
   it('returns the empty object', async () => {
     await expect(parseEnvFile(emptyFile)).resolves.toMatchObject({});
@@ -38,6 +39,17 @@ describe('When valid env file passed', () => {
       ENV3: 'val3',
     };
     const data = await parseEnvFile(varsMultiFile);
+    expect(Object.keys(data)).toHaveLength(3);
+    expect(data).toMatchObject(output);
+  });
+
+  it('returns object with multi properties from commented file', async () => {
+    const output = {
+      ENV: 'val',
+      ENV2: 'val2',
+      ENV3: 'val3',
+    };
+    const data = await parseEnvFile(varsCommentFile);
     expect(Object.keys(data)).toHaveLength(3);
     expect(data).toMatchObject(output);
   });
