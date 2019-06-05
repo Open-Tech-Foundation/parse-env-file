@@ -5,7 +5,7 @@
   "main": "parse-env-file.cjs.js",
   "module": "parse-env-file.esm.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest --watch",
     "build": "rollup -c",
     "start": "rollup -c -w"
   },
@@ -25,13 +25,15 @@
   },
   "homepage": "https://github.com/open-tech-world/parse-env-file#readme",
   "dependencies": {
-    "eslint-config-airbnb-base": "^13.1.0",
-    "eslint-config-prettier": "^4.3.0",
-    "eslint-plugin-import": "^2.17.3",
-    "eslint-plugin-prettier": "^3.1.0"
   },
   "devDependencies": {
     "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-config-prettier": "^4.3.0",
+    "eslint-plugin-import": "^2.17.3",
+    "eslint-plugin-jest": "^22.6.4",
+    "eslint-plugin-prettier": "^3.1.0",
+    "jest": "^24.8.0",
     "prettier": "^1.17.1",
     "rollup": "^1.14.0",
     "rollup-plugin-filesize": "^6.1.0"
