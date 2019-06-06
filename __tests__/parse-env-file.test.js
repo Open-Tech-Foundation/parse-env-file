@@ -1,4 +1,4 @@
-const parseEnvFile = require('../src');
+import parseEnvFile from '../src';
 
 describe('When invalid env file argument passed', () => {
   test('the empty argument fails with an error', async () => {
@@ -7,7 +7,7 @@ describe('When invalid env file argument passed', () => {
   });
 
   test('the non existence file argument fails with an error', async () => {
-    await expect(parseEnvFile('.env.test')).rejects.toThrow('File not found');
+    await expect(parseEnvFile('.env.test')).rejects.toThrow();
   });
 });
 
