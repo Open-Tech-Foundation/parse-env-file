@@ -73,6 +73,6 @@ describe('When valid env file passed', () => {
     };
     const data = await parseEnvFile(varsMixedFile);
     expect(Object.keys(data)).toHaveLength(12);
-    expect(data).toMatchObject(output);
+    expect(data).toEqual(output);
   });
 });
