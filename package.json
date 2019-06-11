@@ -1,6 +1,6 @@
 {
   "name": "@open-tech-world/parse-env-file",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Node.js utility to parse .env files.",
   "main": "parse-env-file.cjs.js",
   "module": "parse-env-file.esm.js",
