@@ -63,16 +63,18 @@ describe('When valid env file passed', () => {
       ENV4: 'val4',
       ENV5: 'val5',
       ENV6:
-        'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+        'Lorem Ipsum is simply dummy \\n text of the printing and typesetting industry.',
       NEW_ENV_VAR_6: '10',
       NEW_ENV_VAR_7: 'https://example.com',
       NODE_PATH: '/usr/local/lib/node_modules:/home/runner/node_modules',
+      '// ENV_VAR': 'Some Value',
       EMPTY: '',
       JSON: '{"foo": "bar"}',
       FOO: '" some value "',
+      FLAG: 'true',
     };
     const data = await parseEnvFile(varsMixedFile);
-    expect(Object.keys(data)).toHaveLength(12);
+    expect(Object.keys(data)).toHaveLength(14);
     expect(data).toEqual(output);
   });
 });

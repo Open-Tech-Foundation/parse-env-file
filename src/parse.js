@@ -1,12 +1,18 @@
-export default buffer => {
+export default envStr => {
   const parsedObj = {};
-  const envParseRegex = /^((.+?)[=](.*))$/;
+  const envRegex = /^((.+?)[=](.*))$/gm;
+  const commentRegex = /^[#].*?$/;
 
-  buffer.split('\n').forEach(line => {
-    const match = envParseRegex.exec(line);
-    if (match) {
-      parsedObj[match[2].trim()] = match[3].trim();
+  let matchArr = [];
+
+  while (matchArr !== null) {
+    matchArr = envRegex.exec(envStr);
+
+    if (matchArr && !commentRegex.test(matchArr[0])) {
+      const key = matchArr[2].trim();
+      const value = matchArr[3].trim();
+      parsedObj[key] = value;
     }
-  });
+  }
   return parsedObj;
 };
