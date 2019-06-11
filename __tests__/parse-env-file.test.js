@@ -59,15 +59,14 @@ describe('When valid env file passed', () => {
     const output = {
       ENV: 'val',
       ENV2: 'val2',
+      '// ENV_VAR': 'Some Value',
       ENV3: 'val3',
       ENV4: 'val4',
       ENV5: 'val5',
-      ENV6:
-        'Lorem Ipsum is simply dummy \\n text of the printing and typesetting industry.',
+      ENV6: `Lorem Ipsum is simply dummy \n text of the printing and typesetting industry.`,
       NEW_ENV_VAR_6: '10',
       NEW_ENV_VAR_7: 'https://example.com',
       NODE_PATH: '/usr/local/lib/node_modules:/home/runner/node_modules',
-      '// ENV_VAR': 'Some Value',
       EMPTY: '',
       JSON: '{"foo": "bar"}',
       FOO: '" some value "',

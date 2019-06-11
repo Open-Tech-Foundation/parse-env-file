@@ -10,7 +10,7 @@ export default envStr => {
 
     if (matchArr && !commentRegex.test(matchArr[0])) {
       const key = matchArr[2].trim();
-      const value = matchArr[3].trim();
+      const value = matchArr[3].trim().replace(/\\n/g, `\n`);
       parsedObj[key] = value;
     }
   }
