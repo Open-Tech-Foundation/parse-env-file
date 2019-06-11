@@ -8,8 +8,8 @@ export default [
   {
     input: 'src/index.js',
     output: [
-      { file: `dist/${pkg.main}`, format: 'cjs' },
-      { file: `dist/${pkg.module}`, format: 'es' },
+      { file: pkg.main, format: 'cjs' },
+      { file: pkg.module, format: 'es' },
     ],
     plugins: [filesize(), eslint({ throwOnError: true })],
     external: ['fs', 'util'],
