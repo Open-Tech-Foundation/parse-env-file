@@ -14,7 +14,15 @@
     "type": "git",
     "url": "https://github.com/open-tech-world/parse-env-file.git"
   },
-  "keywords": [],
+  "keywords": [
+    "node",
+    "node.js",
+    "utility",
+    "parse",
+    "env",
+    ".env",
+    "file"
+  ],
   "author": {
     "name": "Thanga Ganapathy",
     "email": "ganapathy888@gmail.com",
